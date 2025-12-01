@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zohaib Bukhari | Projects</title>
+
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #0b0f1c; color: #fff; }
+    header { background: #1e293b; padding: 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: #fff; margin-left: 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #4f46e5; }
+    section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+    h2 { margin-bottom: 20px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project-card { background: #1e293b; padding: 15px; border-radius: 10px; cursor: pointer; transition: transform 0.2s; }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card img { width: 100%; border-radius: 10px; }
+    .project-card h3 { margin: 10px 0; }
+    .project-card p { font-size: 0.95rem; color: #ddd; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Zohaib Bukhari</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" onclick="window.location='project1.html'">
+        <img src="assets/images/suspension.jpg" alt="Adjustable Race Suspension">
+        <h3>Adjustable Race Suspension</h3>
+        <p>Multi-link suspension design with FEA analysis and CAD validation.</p>
+      </div>
+
+      <div class="project-card" onclick="window.location='project2.html'">
+        <img src="assets/images/heat-exchanger.jpg" alt="Compact Heat Exchanger">
+        <h3>Compact Heat Exchanger</h3>
+        <p>Topology-optimized heat exchanger for efficient thermal performance.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
