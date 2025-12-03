@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Zohaib Bukhari</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <div class="page-menu" id="pageMenu">
+        Pages ▾
+        <ul>
+          <li><a href="index.html">Featured</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-name-container">
+      <a href="index.html" class="site-name">Zohaib Bukhari</a>
+    </div>
+
+    <div class="header-right">
+      <a href="mailto:zohaibabukhari@outlook.com"><img src="assets/icons/email.svg" class="icon" alt="Email"></a>
+      <a href="https://www.linkedin.com/in/zohaib-abbas-bukhari/" target="_blank"><img src="assets/icons/linkedin.svg" class="icon" alt="LinkedIn"></a>
+    </div>
+  </header>
+
+  <!-- PROJECTS LIST -->
+  <section id="projects" class="projects-list">
+    <h1>Projects / Experience</h1>
+    <div class="project-links">
+      <button class="project-link" onclick="scrollToProject('project1')">Project 1</button>
+      <button class="project-link" onclick="scrollToProject('project2')">Project 2</button>
+      <button class="project-link" onclick="scrollToProject('project3')">Project 3</button>
+      <button class="project-link" onclick="scrollToProject('project4')">Project 4</button>
+      <button class="project-link" onclick="scrollToProject('project5')">Project 5</button>
+    </div>
+
+    <!-- PROJECT DETAILS -->
+    <div id="project1" class="project-detail">
+      <h2>Project 1</h2>
+      <img src="assets/images/project1.jpg" alt="Project 1">
+      <p>Brief description of Project 1 and skills demonstrated.</p>
+      <a href="#projects" class="back-top">Back to Top</a>
+    </div>
+
+    <div id="project2" class="project-detail">
+      <h2>Project 2</h2>
+      <img src="assets/images/project2.jpg" alt="Project 2">
+      <p>Brief description of Project 2 and skills demonstrated.</p>
+      <a href="#projects" class="back-top">Back to Top</a>
+    </div>
+
+    <div id="project3" class="project-detail">
+      <h2>Project 3</h2>
+      <img src="assets/images/project3.jpg" alt="Project 3">
+      <p>Brief description of Project 3 and skills demonstrated.</p>
+      <a href="#projects" class="back-top">Back to Top</a>
+    </div>
+
+    <div id="project4" class="project-detail">
+      <h2>Project 4</h2>
+      <img src="assets/images/project4.jpg" alt="Project 4">
+      <p>Brief description of Project 4 and skills demonstrated.</p>
+      <a href="#projects" class="back-top">Back to Top</a>
+    </div>
+
+    <div id="project5" class="project-detail">
+      <h2>Project 5</h2>
+      <img src="assets/images/project5.jpg" alt="Project 5">
+      <p>Brief description of Project 5 and skills demonstrated.</p>
+      <a href="#projects" class="back-top">Back to Top</a>
+    </div>
+  </section>
+
+  <div class="popout-overlay" id="popout">
+    <img id="popout-img" src="" alt="Popout Image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

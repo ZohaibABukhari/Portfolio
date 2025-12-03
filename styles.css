@@ -1,0 +1,301 @@
+/* ==========================
+   GENERAL RESET & LAYOUT
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e6f0ff; /* Engineering paper blue */
+  color: #222; /* Charcoal text */
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  font-size: 16px;
+}
+
+/* ==========================
+   ENGINEERING GRID BACKGROUND
+========================== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 40px 40px; /* grid spacing */
+  z-index: -1;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.site-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #a0c4ff; /* subtle highlight */
+  border-radius: 3px;
+  text-decoration: none;
+  color: #222;
+  transition: background 0.3s;
+}
+
+.site-name:hover {
+  background-color: #7aa9e6;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right .icon {
+  width: 28px;
+  height: 28px;
+  margin-left: 1rem;
+  transition: transform 0.3s;
+}
+
+.header-right .icon:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================
+   COLLAPSIBLE PAGE MENU
+========================== */
+.page-menu {
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  position: relative;
+}
+
+.page-menu ul {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: rgba(255,255,255,0.95);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  list-style: none;
+}
+
+.page-menu ul li {
+  padding: 0.5rem 1rem;
+}
+
+.page-menu ul li a {
+  text-decoration: none;
+  color: #222;
+  transition: background 0.3s;
+}
+
+.page-menu ul li a:hover {
+  background-color: #a0c4ff;
+  border-radius: 3px;
+}
+
+/* Toggle menu active state (JS will add .active) */
+.page-menu.active ul {
+  display: block;
+}
+
+/* ==========================
+   FEATURED SECTION
+========================== */
+.featured-section {
+  margin-top: 80px; /* space below header */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.intro-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  background-color: #0077ff; /* electric blue */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+  background-color: #005bb5;
+  color: #fff;
+}
+
+/* ==========================
+   HORIZONTAL SCROLLER
+========================== */
+.projects-scroller {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  scroll-behavior: smooth;
+}
+
+.projects-scroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroller::-webkit-scrollbar-thumb {
+  background: #0077ff;
+  border-radius: 4px;
+}
+
+.project-card {
+  min-width: 300px;
+  height: 200px;
+  margin: 0 1rem;
+  background: #fff;
+  border-radius: 5px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+  width: 80%;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* ==========================
+   ABOUT & PROJECT DETAIL SECTIONS
+========================== */
+.about-section, .project-detail {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-section h1, .project-detail h2 {
+  margin-bottom: 1rem;
+}
+
+.about-section p, .project-detail p {
+  margin-bottom: 1rem;
+}
+
+.back-top {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #0077ff;
+  transition: color 0.3s;
+}
+
+.back-top:hover {
+  color: #005bb5;
+}
+
+/* ==========================
+   LIGHTBOX / IMAGE POPOUT
+========================== */
+.popout-overlay {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popout-overlay.active {
+  display: flex;
+}
+
+.popout-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+  .projects-scroller {
+    padding: 1rem 0;
+  }
+
+  .project-card {
+    min-width: 250px;
+    height: 180px;
+  }
+
+  .header-right .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+}

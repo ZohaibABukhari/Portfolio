@@ -3,41 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zohaib Bukhari | Home</title>
-
-  <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #0b0f1c; color: #fff; }
-    header { background: #1e293b; padding: 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-    nav a { color: #fff; margin-left: 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #4f46e5; }
-    .hero { text-align: center; padding: 120px 20px; background: url('assets/images/engineering-bg.jpg') center/cover no-repeat; }
-    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto; }
-    section { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
-    h2 { margin-bottom: 20px; }
-    p { line-height: 1.6; }
-  </style>
+  <title>Portfolio | Zohaib Bukhari</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
-    <div class="logo">Zohaib Bukhari</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="header-left">
+      <div class="page-menu" id="pageMenu">
+        Pages ▾
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-name-container">
+      <a href="index.html" class="site-name">Zohaib Bukhari</a>
+    </div>
+
+    <div class="header-right">
+      <a href="mailto:zohaibabukhari@outlook.com"><img src="assets/icons/email.svg" class="icon" alt="Email"></a>
+      <a href="https://www.linkedin.com/in/zohaib-abbas-bukhari/" target="_blank"><img src="assets/icons/linkedin.svg" class="icon" alt="LinkedIn"></a>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to My Engineering Portfolio</h1>
-    <p>Explore my mechanical engineering projects, CAD files, and prototypes. Designed to showcase both functionality and creativity.</p>
+  <!-- FEATURED SECTION -->
+  <section id="featured" class="featured-section">
+    <div class="intro-text">
+      <h1>Driven Mechanical Engineer</h1>
+      <p>Designing systems, solving impossible problems, and turning imagination into reality.</p>
+      <a href="about.html" class="project-link">About</a>
+      <a href="projects.html" class="project-link">Experience / Projects</a>
+    </div>
+
+    <!-- FEATURED PROJECTS SCROLLER -->
+    <div class="projects-scroller" id="featured-scroller">
+      <div class="project-card">
+        <img src="assets/images/project1.jpg" alt="Project 1">
+        <h2>Project 1</h2>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/project2.jpg" alt="Project 2">
+        <h2>Project 2</h2>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/project3.jpg" alt="Project 3">
+        <h2>Project 3</h2>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/project4.jpg" alt="Project 4">
+        <h2>Project 4</h2>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/project5.jpg" alt="Project 5">
+        <h2>Project 5</h2>
+      </div>
+    </div>
   </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm Zohaib Bukhari, a mechanical engineer passionate about design, modeling, and real-world problem solving. This portfolio highlights my key projects and technical work.</p>
-  </section>
+  <!-- LIGHTBOX OVERLAY -->
+  <div class="popout-overlay" id="popout">
+    <img id="popout-img" src="" alt="Popout Image">
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
